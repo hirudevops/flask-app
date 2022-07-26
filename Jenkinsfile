@@ -2,7 +2,7 @@ node {
    stage('Get Source') {
       // copy source code from local file system and test
       // for a Dockerfile to build the Docker image
-      git credentialsId: 'github-key', url: 'https://github.com/hirudevops/flask-app.git'
+      git credentialsId: 'hiru-github-token', url: 'https://github.com/hirudevops/flask-app.git'
       if (!fileExists("Dockerfile")) {
          error('Dockerfile missing.')
       }
