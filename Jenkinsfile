@@ -7,7 +7,7 @@ node {
          error('Dockerfile missing.')
       }
    }
-   stage('run docker container') {
+   stage('run python app with docker container') {
     // some block
     sshPublisher(publishers: [sshPublisherDesc(configName: 'docker-host', transfers: [sshTransfer(cleanRemote: false, excludes: '',
     execCommand: '''cd /jenkins/jenkins_home/workspace/flask_app-demo-pipeline
